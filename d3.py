@@ -1,13 +1,8 @@
 #!/usr/bin/env python
-def dir_a(path):
-    dir_b = open(path,'r')
-    dir_c = open('/home/dir-aa','w')
-    while True:
-        da = dir_b.read()
-        if not da:
-            break
-        dir_c.write(da)
-    dir_b.close()
-    dir_c.close()
-
-dir_a('/etc/hosts')
+import os,sys
+def aa(path):
+    if os.path.isfile(path):
+        os.mknod(path)
+    else:
+        os.mkdir(path)
+aa('/home/sl')
